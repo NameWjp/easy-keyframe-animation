@@ -1,0 +1,57 @@
+{
+  "name": "easy-keyframe-animation",
+  "version": "0.0.0",
+  "description": "一个使用 js 动态创建 animation 的库",
+  "main": "dist/easy-keyframe-animation.umd.js",
+  "module": "dist/easy-keyframe-animation.esm.js",
+  "esnext": "dist/easy-keyframe-animation.esm.js",
+  "types": "dist/types/index.d.ts",
+  "author": "wangjp",
+  "license": "MIT",
+  "repository": "https://github.com/NameWjp/easy-keyframe-animation.git",
+  "homepage": "https://github.com/NameWjp/easy-keyframe-animation#readme",
+  "bugs": "https://github.com/NameWjp/easy-keyframe-animation/issues",
+  "keywords": [
+    "vue3",
+    "photo-preview",
+    "vue3-photo-preview"
+  ],
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc --module commonjs && rollup -c rollup.config.ts",
+    "dev": "rollup -c rollup.config.ts -w",
+    "clean": "rimraf ./dist",
+    "release": "npm run build && release.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "FORCE_COLOR=1 node scripts/verify-commit.js"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": "eslint"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "chalk": "^4.1.2",
+    "eslint": "^7.32.0",
+    "husky": "4.2.3",
+    "lint-staged": "^11.1.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
+}
