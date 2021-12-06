@@ -1,3 +1,5 @@
-const animation = function() {};
+import keyframeAnimation from "./keyframeAnimation";
 
-export default { animation };
+export * from './types';
+
+export default keyframeAnimation;
