@@ -1,5 +1,5 @@
 export type KeyframeOptions = {
-  [key: string]: Record<string, unknown>
+  [key: string]: Record<string, string>
 }
 
 export type KeyframesMap = {

@@ -31,7 +31,7 @@ class KeyframeAnimation {
     };
   }
 
-  unregisterKeyframe(name: string) {
+  unregisterKeyframe(name: string): void {
     if (this.keyframesMap.hasOwnProperty(name)) {
       const styleEl = this.keyframesMap[name].styleEl;
       styleEl.parentNode?.removeChild(styleEl);
@@ -70,15 +70,15 @@ class KeyframeAnimation {
     });
   }
 
-  removeAnimation(el: HTMLElement) {
+  removeAnimation(el: HTMLElement): void {
     el.style[prefixStyle('animation') as any] = 'none';
   }
 
-  pauseAnimation(el: HTMLElement) {
+  pauseAnimation(el: HTMLElement): void {
     el.style[prefixStyle('animationPlayState') as any] = 'paused';
   }
 
-  recoverAnimation(el: HTMLElement) {
+  recoverAnimation(el: HTMLElement): void {
     el.style[prefixStyle('animationPlayState') as any] = 'running';
   }
 }

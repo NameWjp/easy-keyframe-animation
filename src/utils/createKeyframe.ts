@@ -1,7 +1,7 @@
 import { prefix, prefixStyle } from "./prefix";
 import { KeyframeOptions } from '../types';
 
-function getLine(key: string, styles: Record<string, unknown>): string {
+function getLine(key: string, styles: Record<string, string>): string {
   if (key === 'from') {
     key = '0%';
   }
@@ -14,7 +14,7 @@ function getLine(key: string, styles: Record<string, unknown>): string {
   return `${key}{${getStyle(styles)}}`;
 }
 
-function getStyle(styles: Record<string, unknown>): string {
+function getStyle(styles: Record<string, string>): string {
   let buf = '';
 
   Object.keys(styles).forEach(key => {
