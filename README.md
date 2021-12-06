@@ -35,12 +35,12 @@ keyframeAnimation.addAnimation(el, {
 #### name
 注册的 keyframe 名称
 #### options
-对应 [keyframes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes) 的每一项。key 可以是 from，to 等关键字，填入 number 时会自动添加百分号。Record<string, string> 对应动画的每一帧，左侧是变化的属性，右侧是变化的值（需要自行拼接成字符串）
+对应 [keyframes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes) 的每一项。key 可以是 from，to 等关键字，填入 number 时会自动添加百分号。Record&lt;string, string&gt; 对应动画的每一帧，左侧是变化的属性，右侧是变化的值（需要自行拼接成字符串）
 ### unregisterKeyframe(name: string): void
 注销一个 keyframe
 #### name
 注销的 keyframe 名称
-### addAnimation(el: HTMLElement, options: string | AnimationOptions, cb?: () => void): Promise<void>
+### addAnimation(el: HTMLElement, options: string | AnimationOptions, cb?: () => void): Promise&lt;void&gt;
 挂载一个动画到 el 上，默认返回 Promise，动画完成后会 resolve
 #### el
 挂载dom
