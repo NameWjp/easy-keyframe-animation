@@ -15,7 +15,7 @@ then
     git commit -m "build: $VERSION"
   fi
   npm version $VERSION --message "release: $VERSION"
-  git push origin master
+  git push origin main
   git push origin --tags
 
   # publish
