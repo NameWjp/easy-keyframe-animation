@@ -1,7 +1,7 @@
 import createKeyframe from './utils/createKeyframe';
 import loadStyle from './utils/loadStyle';
 import { KeyframeOptions, KeyframesMap, AnimationOptions } from './types';
-import { prefixStyle } from './utils/prefix';
+import { prefixStyleCamel } from './utils/prefix';
 
 const defaultAnimationOptions = {
   duration: '1s',
@@ -66,20 +66,20 @@ class KeyframeAnimation {
         animationOptions.playState
       ];
 
-      el.style[prefixStyle('animation') as any] = styles.join(' ');
+      el.style[prefixStyleCamel('animation') as any] = styles.join(' ');
     });
   }
 
   removeAnimation(el: HTMLElement): void {
-    el.style[prefixStyle('animation') as any] = 'none';
+    el.style[prefixStyleCamel('animation') as any] = 'none';
   }
 
   pauseAnimation(el: HTMLElement): void {
-    el.style[prefixStyle('animationPlayState') as any] = 'paused';
+    el.style[prefixStyleCamel('animationPlayState') as any] = 'paused';
   }
 
   recoverAnimation(el: HTMLElement): void {
-    el.style[prefixStyle('animationPlayState') as any] = 'running';
+    el.style[prefixStyleCamel('animationPlayState') as any] = 'running';
   }
 }
 
