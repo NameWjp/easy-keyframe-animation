@@ -1,5 +1,5 @@
 # easy-keyframe-animation
-一个使用 js 动态创建 animation 和 keyframe 的库，支持 typescript，兼容各类浏览器。
+使用 js 动态创建 animation 和 keyframe 的库，支持 typescript，兼容各类浏览器。
 
 ## 使用
 ### 安装
