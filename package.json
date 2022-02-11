@@ -12,9 +12,8 @@
   "homepage": "https://github.com/NameWjp/easy-keyframe-animation#readme",
   "bugs": "https://github.com/NameWjp/easy-keyframe-animation/issues",
   "keywords": [
-    "vue3",
-    "photo-preview",
-    "vue3-photo-preview"
+    "animation",
+    "keyframe"
   ],
   "engines": {
     "node": ">=14",
