@@ -1,6 +1,6 @@
 {
   "name": "easy-keyframe-animation",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "一个使用 js 动态创建 animation 的库",
   "main": "dist/easy-keyframe-animation.umd.js",
   "module": "dist/easy-keyframe-animation.esm.js",
